@@ -7,6 +7,12 @@ import re
 import os
 import codecs
 
+#切換到存放小說的目錄中
+if not os.path.exists('./Books'):
+    os.makedirs('./Books')
+
+os.chdir('./Books') 
+
 while True:
     url = input('輸入網址(第零章)')
     res = rq.get(url)
